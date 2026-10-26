@@ -1,0 +1,40 @@
+__pycache__/
+*.pyc
+.venv/
+.mn_cache/
+.mn_dependencias/
+entrada/*
+!entrada/.gitkeep
+referencias_clase/*
+!referencias_clase/.gitkeep
+resultados/*
+!resultados/.gitkeep
+.cliente/
+.servidor.local
+.privado*/
+*.key
+id_ed25519*
+
+# Datos privados del servidor
+/referencias_clase/
+/.mn_cache/
+
+# Archivos de trabajo
+/entrada/*
+!/entrada/.gitkeep
+/resultados/*
+!/resultados/.gitkeep
+
+# Credenciales y configuraciones privadas
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

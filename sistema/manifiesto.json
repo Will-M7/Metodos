@@ -1,0 +1,165 @@
+{
+  "proyecto": "metodos-cliente-servidor-v2",
+  "archivos": [
+    {
+      "ruta": ".gitattributes",
+      "sha256": "6e48dca50f53cb8db20f9bef12a1bd1c5760423f62d43b29e254ae38d1b55878"
+    },
+    {
+      "ruta": ".gitignore",
+      "sha256": "6d5c9e66800475a595a943442453b0902a7c0931a1e4de86392e7f79a5b1197f"
+    },
+    {
+      "ruta": "AGENTS.md",
+      "sha256": "85f86b6a73c5645e219577d90f7765233e23db405609e345b70a3c066182fba8"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "f5e85fca26b6bf0314d353d7b37ba57b43a490fae504c98d0f76cdb872589e2d"
+    },
+    {
+      "ruta": "cliente/comun.ps1",
+      "sha256": "0380124589effe3009d520a19168f7745143add402a89d23d59269d04d6d8dac"
+    },
+    {
+      "ruta": "cliente/dependencias.ps1",
+      "sha256": "b7af6b192a8e670ba00d58a684d643e030dcc9a3856c2c3009f38dd375454133"
+    },
+    {
+      "ruta": "cliente/generar.ps1",
+      "sha256": "0c00d768a4dd4d4d60d34a52ec4de9350a6df2b501855207d530aa7eacf2b1bb"
+    },
+    {
+      "ruta": "cliente/instalar.ps1",
+      "sha256": "a3805c0aa78e8cb105041e3cc99b0aa89b73113ca1c1a7dd461e5fe522f212af"
+    },
+    {
+      "ruta": "cliente/limpiar.ps1",
+      "sha256": "be2c3e674d7d9bffef8b982c09ebf7a408aba28c3a77af3643e2c9ad22d63628"
+    },
+    {
+      "ruta": "cliente/respuestas.ps1",
+      "sha256": "af2e375797c07b414dc061c41ecb2a02505bf57ac7aa56ce07966d05d23d9a3e"
+    },
+    {
+      "ruta": "cliente/revisar.ps1",
+      "sha256": "ef8185961f82d66bf15e98a1d13e89aece89ad3020e2eea74795ebf6348982f7"
+    },
+    {
+      "ruta": "generar.ps1",
+      "sha256": "4f60014cc6d67db66e5483cabd6c30509667b2ec809adaebf91f86dd66dafb2a"
+    },
+    {
+      "ruta": "instalar.ps1",
+      "sha256": "bfa51aea777b31e26e8cc872883e0fbf8df137a1e4805a6a6d63bc81cc4eb258"
+    },
+    {
+      "ruta": "limpiar.ps1",
+      "sha256": "7dcd13d69508575dcdc770dcb2b2b582f8e74a6962757f559a11cd4bf8ea73d4"
+    },
+    {
+      "ruta": "requirements.txt",
+      "sha256": "426525444d53ac676628f1a1de9f494c83898e966f35cf925887aebf0762edd0"
+    },
+    {
+      "ruta": "respuestas.ps1",
+      "sha256": "d9bf9b584ea17ee8f6a53230a780865c85a1c394840b8675ad2c684c9eb48373"
+    },
+    {
+      "ruta": "revisar.ps1",
+      "sha256": "cf4570c6db561cf47b526a4d07163be9a10befff2d0f634ba9d4b4dfdedd7c47"
+    },
+    {
+      "ruta": "servidor/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "servidor/activar_ssh.ps1",
+      "sha256": "70c5884a85fec90d4d4550dd42f90ae3038aaf19e7e62e6e4436093293eefe8f"
+    },
+    {
+      "ruta": "servidor/config.py",
+      "sha256": "bf6a57d0159a063e0798b70fafc9408f01ab5c08a51bee6965c3b773c151a7bf"
+    },
+    {
+      "ruta": "servidor/ejecutar.py",
+      "sha256": "5b1e3b633da6c019a72bb31c3760b3ab168da9a2cfc48a14373ed092b1beac5d"
+    },
+    {
+      "ruta": "servidor/instalar_servidor.ps1",
+      "sha256": "2c4955970347094088f459c8f4bdfc6190365cae4096c77af466fb6681c8f046"
+    },
+    {
+      "ruta": "servidor/instalar_servidor.sh",
+      "sha256": "487a5c8cee551bdb40272352e032a004b0f212531a3d33f2c9d88742cffa9982"
+    },
+    {
+      "ruta": "servidor/preparar.py",
+      "sha256": "75ed0e581af865239b09c706fddaa6f87481e674564a75c5285d8646f1cbc388"
+    },
+    {
+      "ruta": "servidor/protocolo.py",
+      "sha256": "d508de9c1c91d051c7e13e6767f8af7de21b2557780f011009bd0f0a01317e1b"
+    },
+    {
+      "ruta": "servidor/worker.py",
+      "sha256": "71a402c247662dc9176158574936064de5f645c99c3e22a307242d38dd3f26af"
+    },
+    {
+      "ruta": "sistema/capturar.ps1",
+      "sha256": "5685c82d20cfe0e88ef6e732c6a9c9b711cbfcc18d8efbc54d0a5ae96abab990"
+    },
+    {
+      "ruta": "sistema/comun.ps1",
+      "sha256": "f1f65d9c3f698cbb70b2197df540f0a0f729a508e1311608d3368d97679613d5"
+    },
+    {
+      "ruta": "sistema/desinstalar.ps1",
+      "sha256": "60efeedc801fa3ac975faef68216b2319a5b0948d8aec3fad18341809edee4af"
+    },
+    {
+      "ruta": "src/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "src/archivos.py",
+      "sha256": "d6fef619be6ad8ce777e5c774bf4fbc59ac5666b9a0b50a9de28a62b6b0ba3f6"
+    },
+    {
+      "ruta": "src/codex.py",
+      "sha256": "773e5afa10d2275d20be335558914833fc3dd3c854114ab6e6667a95667b640b"
+    },
+    {
+      "ruta": "src/excel.py",
+      "sha256": "7b724c2ed5b5dc9c8bdf6e149f2acf10fc4fb5492599e76034359d7c283ddb04"
+    },
+    {
+      "ruta": "src/main.py",
+      "sha256": "987c5e04a1166c37005a7f943b6119f7e27ace0bc5a4802e13a1fe7d56653ab2"
+    },
+    {
+      "ruta": "src/memoria.py",
+      "sha256": "f10608d3b72d618ff58659bff2aaa512a6b4b3e53ccc5c8c30555bebe494549d"
+    },
+    {
+      "ruta": "src/octave.py",
+      "sha256": "84f1bb3f51ec8ca9afc9666f8df13610b75fbe2c87c6d3897292b4402443af3f"
+    },
+    {
+      "ruta": "src/verificacion.py",
+      "sha256": "da71929b22b4d8a7c936c6372f895361445aa75145f529d6ac1a65f7a9da2cdb"
+    },
+    {
+      "ruta": "tests/test_integracion.py",
+      "sha256": "b0202cc2d14b473c3f8b5e0be3a07eb840d695deb5d7b48a65ee4e0ea25de2f4"
+    },
+    {
+      "ruta": "tests/test_remoto.py",
+      "sha256": "584d4459f97d2b8ebee6c4613af08c07226c07b04b97699af862e803f76532ab"
+    },
+    {
+      "ruta": "tests/test_sistema.py",
+      "sha256": "83609928df1da2a1fb4994968c8ce9ea9582f69e49fbcbab5d9500bf50876a4c"
+    }
+  ]
+}
