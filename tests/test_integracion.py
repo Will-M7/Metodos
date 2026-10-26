@@ -53,4 +53,17 @@ class RealSSHTests(unittest.TestCase):
             self.assertNotEqual(subprocess.run([PS,'-NoProfile','-File',str(path)],capture_output=True,timeout=60).returncode,0)
 
 
+
+@unittest.skipUnless(WINDOWS and os.environ.get('METODOS_PROBAR_ALTA')=='1',
+                     'Requiere Windows propietario en la tailnet y Serve HTTPS real configurado')
+class AutomaticEnrollmentTests(unittest.TestCase):
+    def test_auto_enroll_fingerprint_and_no_token_probe(self):
+        self.assertTrue(os.environ.get('METODOS_CLAVE_PRUEBA'))
+        with tempfile.TemporaryDirectory() as d:
+            path=Path(d)/'auto-real.ps1'
+            path.write_text("function global:Read-Host { ConvertTo-SecureString $env:METODOS_CLAVE_PRUEBA -AsPlainText -Force }\n& '"+str(ROOT/'cliente/auto.ps1').replace("'","''")+"'\nexit $LASTEXITCODE\n",encoding='utf-8')
+            result=subprocess.run([PS,'-NoProfile','-File',str(path)],capture_output=True,text=True,timeout=180)
+            self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+
+
 if __name__=='__main__':unittest.main()

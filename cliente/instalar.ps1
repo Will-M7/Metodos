@@ -1,5 +1,5 @@
 #Requires -Version 5.1
-param([string]$Servidor,[string]$Usuario,[int]$Puerto=2222,[string]$Huella,[switch]$SoloPreparar)
+param([string]$Servidor,[string]$Usuario,[int]$Puerto=2222,[string]$Huella,[switch]$SoloPreparar,[switch]$SinPrueba,[switch]$PreparacionAutomatica)
 $ErrorActionPreference='Stop'
 try {
     if ($env:OS -ne 'Windows_NT') { throw 'El cliente requiere Windows 10/11 y PowerShell 5.1 o posterior.' }
@@ -37,8 +37,10 @@ try {
         if ($process.ExitCode -ne 0) { throw ('No se genero clave SSH: '+$errorText) }
         $process.Dispose()
     }
-    Write-Host 'Enrolar SOLO esta clave publica en la laptop (nunca copiar la clave privada):'
-    Write-Host (Get-Content -LiteralPath ($key+'.pub') -Raw)
+    if (-not $PreparacionAutomatica) {
+        Write-Host 'Enrolar SOLO esta clave publica en la laptop (nunca copiar la clave privada):'
+        Write-Host (Get-Content -LiteralPath ($key+'.pub') -Raw)
+    }
     if (-not $SoloPreparar) {
         $config=Join-Path $folder 'config.json'
         $old=if (Test-Path -LiteralPath $config) { Get-Content -LiteralPath $config -Raw | ConvertFrom-Json } else { $null }
@@ -62,12 +64,13 @@ try {
         @{version=2;servidor=$Servidor;usuario=$Usuario;puerto=$Puerto;huella=$Huella} | ConvertTo-Json | Set-Content -LiteralPath $config -Encoding UTF8
     }
     $entries=@()
-    foreach ($name in @('id_ed25519','id_ed25519.pub','known_hosts','config.json')) {
+    foreach ($name in @('id_ed25519','id_ed25519.pub','known_hosts','config.json','origen.json','enrolamiento.json')) {
         $file=Join-Path $folder $name
         if (Test-Path -LiteralPath $file) { $entries+=@{ruta=('.cliente/'+$name);sha256=(Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash.ToLowerInvariant()} }
     }
     @{proyecto='metodos-cliente-v2';archivos=$entries} | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $owner -Encoding UTF8
-    if ($SoloPreparar) { Write-Host 'Transporte preparado. Tras enrolar la clave publica, ejecutar instalar.ps1 con los datos de la laptop.';exit 0 }
+    if ($SoloPreparar) { if (-not $PreparacionAutomatica) { Write-Host 'Transporte preparado. Tras enrolar la clave publica, ejecutar instalar.ps1 con los datos de la laptop.' };exit 0 }
+    if ($SinPrueba) { Write-Host 'Configuracion guardada; falta comprobar autorizacion SSH.';exit 0 }
     $code=Invoke-Metodos -Modo respuestas -Comprobar
     if ($code -ne 0) { throw 'Servidor ocupado o comunicacion sin confirmar. Configuracion conservada para reintentar.' }
     Write-Host 'Instalacion del cliente terminada. No se instalaron Python, Codex, Octave ni Excel.'

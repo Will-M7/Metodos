@@ -7,15 +7,19 @@
     },
     {
       "ruta": ".gitignore",
-      "sha256": "6d5c9e66800475a595a943442453b0902a7c0931a1e4de86392e7f79a5b1197f"
+      "sha256": "05f436460393aeae5bb5380a6d06d30ca90972383cda7a12f2f0582fe3e2bd3b"
     },
     {
       "ruta": "AGENTS.md",
-      "sha256": "85f86b6a73c5645e219577d90f7765233e23db405609e345b70a3c066182fba8"
+      "sha256": "09f116187c014eb7ff3a97b8386e10a23ef5c5e796c859bfa562ea2fbf3c30de"
     },
     {
       "ruta": "README.md",
-      "sha256": "f5e85fca26b6bf0314d353d7b37ba57b43a490fae504c98d0f76cdb872589e2d"
+      "sha256": "469eb91c4547cb236fd8ad7093abb4e357be0a8faa17525cfaf7d07c6a8a2487"
+    },
+    {
+      "ruta": "cliente/auto.ps1",
+      "sha256": "c430372ab0c1cc8c7415c3a3f0e71caedf1b937db5819726f330133dd7cf1de0"
     },
     {
       "ruta": "cliente/comun.ps1",
@@ -31,7 +35,7 @@
     },
     {
       "ruta": "cliente/instalar.ps1",
-      "sha256": "a3805c0aa78e8cb105041e3cc99b0aa89b73113ca1c1a7dd461e5fe522f212af"
+      "sha256": "6233d92c46a26fba5c30b9eafcf0eded3ffcdd28c51463e6b9eb0284fc7d77c2"
     },
     {
       "ruta": "cliente/limpiar.ps1",
@@ -48,6 +52,10 @@
     {
       "ruta": "generar.ps1",
       "sha256": "4f60014cc6d67db66e5483cabd6c30509667b2ec809adaebf91f86dd66dafb2a"
+    },
+    {
+      "ruta": "inicio.ps1",
+      "sha256": "827a06091742c1c550b5e7ba0753a3d98973c0e1975d57c7bcb22c4e41f723aa"
     },
     {
       "ruta": "instalar.ps1",
@@ -82,8 +90,16 @@
       "sha256": "bf6a57d0159a063e0798b70fafc9408f01ab5c08a51bee6965c3b773c151a7bf"
     },
     {
+      "ruta": "servidor/dependencias_ubuntu.sh",
+      "sha256": "60084861c91b4d6da22bfd8050e3bb17dec81958259f632160e9fbca49630788"
+    },
+    {
       "ruta": "servidor/ejecutar.py",
       "sha256": "5b1e3b633da6c019a72bb31c3760b3ab168da9a2cfc48a14373ed092b1beac5d"
+    },
+    {
+      "ruta": "servidor/enrolamiento.py",
+      "sha256": "f8c2e4343d5493cee98417a8910f1a153b99363aabe9d5aff32638892497efc7"
     },
     {
       "ruta": "servidor/instalar_servidor.ps1",
@@ -95,7 +111,15 @@
     },
     {
       "ruta": "servidor/preparar.py",
-      "sha256": "75ed0e581af865239b09c706fddaa6f87481e674564a75c5285d8646f1cbc388"
+      "sha256": "79f503fb34328dcd740f7615e4abec35706854899c53863d78580430839b8eaa"
+    },
+    {
+      "ruta": "servidor/preparar_automatico.py",
+      "sha256": "82a68f36512f4233d158abc9d8d8ceb3396a3007e24e40d7f7c9c20c29262341"
+    },
+    {
+      "ruta": "servidor/preparar_automatico.sh",
+      "sha256": "89498d530b81ee7fdc4e41cb4c88d4ef7136896353a8a8dc2f15872477eada07"
     },
     {
       "ruta": "servidor/protocolo.py",
@@ -115,7 +139,7 @@
     },
     {
       "ruta": "sistema/desinstalar.ps1",
-      "sha256": "60efeedc801fa3ac975faef68216b2319a5b0948d8aec3fad18341809edee4af"
+      "sha256": "dab57817d5b04db5de717d0324137ba4f1abb3737381ba3052b254c9b5a7806c"
     },
     {
       "ruta": "src/__init__.py",
@@ -150,8 +174,12 @@
       "sha256": "da71929b22b4d8a7c936c6372f895361445aa75145f529d6ac1a65f7a9da2cdb"
     },
     {
+      "ruta": "tests/test_automatico.py",
+      "sha256": "947e97915e1135b8a5e52caffe229732e3fb4fa5a6dfa54aedf4229da86edcae"
+    },
+    {
       "ruta": "tests/test_integracion.py",
-      "sha256": "b0202cc2d14b473c3f8b5e0be3a07eb840d695deb5d7b48a65ee4e0ea25de2f4"
+      "sha256": "bd3aa0cff11baaef674448e52aec231cda163b5d68f3797e88cb0d5c90e38dda"
     },
     {
       "ruta": "tests/test_remoto.py",

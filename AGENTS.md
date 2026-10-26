@@ -21,3 +21,9 @@ Usar Context7 MCP para consultar documentación actual al trabajar con bibliotec
 - Las referencias, cache, perfiles efectivos y configuración viven en un directorio privado externo al repositorio. No distribuirlas a los clientes.
 - La revisión por ejercicio clasifica VALIDADA, INCORRECTA o PENDIENTE. Sólo VALIDADA puede originar reglas matemáticas, tras comprobación Python y ejecución real Octave. De las otras clasificaciones sólo usar formato independiente de cálculos.
 - Las 26 reglas históricas necesitan esta revisión; la versión antigua no es autoridad. Conservar originales, errores y correcciones con trazabilidad. La exactitud matemática prevalece sobre copiar errores.
+
+## Alta automática del propietario
+- Se permite exclusivamente el endpoint mínimo de alta detrás de Tailscale Serve HTTPS; el cálculo sigue por SSH.
+- El alta escucha sólo en socket Unix privado. Contrastar las cabeceras autenticadas de Serve con `tailscale whois --json` (nodo y propietario reales); no confiar en una IP, JSON del cliente o cabecera falsificable por sí solos.
+- No usar Funnel ni publicar puertos HTTP. Admitir sólo claves públicas ED25519 bien formadas y conservar la privada en Windows. Aplicar revocaciones y limitar cada clave al dispositivo verificado.
+- Verificar procedencia del bootstrap GitHub, revisión fija y hashes antes de ejecutar. Conservar instalaciones previas, referencias y resultados.

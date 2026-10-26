@@ -114,7 +114,7 @@ def tailscale_ip():
         return None
 
 
-def configure_ssh(home,python,public_key,port=2222):
+def configure_ssh(home,python,public_key,port=2222,allow_empty=False,launcher=None):
     ip=tailscale_ip()
     if not ip:
         raise ValueError('Falta Tailscale conectado: iniciar sesión con tailscale up')
@@ -136,9 +136,15 @@ def configure_ssh(home,python,public_key,port=2222):
         if os.name!='nt':
             auth.chmod(0o600)
     if not (home/'ssh/authorized_keys').exists():
-        raise ValueError('Falta enrolar la clave pública de un cliente con --clave-publica')
+        if not allow_empty:
+            raise ValueError('Falta enrolar la clave pública de un cliente con --clave-publica')
+        atomic=home/'ssh/authorized_keys'
+        atomic.touch(mode=0o600,exist_ok=True)
     quote=lambda p: '"'+str(p).replace('\\','/').replace('"','')+'"'
     command=quote(python)+' -B '+quote(REPO/'servidor/worker.py')+' --home '+quote(home)
+    if launcher is not None:
+        import shlex
+        command=shlex.quote(str(launcher))
     config=f'''Port {port}
 ListenAddress {ip}
 HostKey {quote(key)}
